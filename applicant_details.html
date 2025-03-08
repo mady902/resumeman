@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applicant Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Applicant Details</h1>
+        <h2>{{ applicant['name'] }}</h2>
+        <p><strong>Email:</strong> {{ applicant['email'] }}</p>
+        <p><strong>Phone:</strong> {{ applicant['phone'] }}</p>
+        <p><strong>Position:</strong> {{ applicant['position'] }}</p>
+        <p><strong>Resume:</strong> <a href="/{{ applicant['resume_path'] }}" target="_blank">View Resume</a></p>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to List</a>
+    </div>
+</body>
+</html>
